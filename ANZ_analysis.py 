@@ -1,0 +1,18 @@
+
+import pandas as pd 
+path = "/Users/macbook/DataANZ/ANZData.xlsx"
+ANZ_df = pd.read_excel(path)
+
+
+#drop unused columns 
+ANZ_df.drop(['merchant_code', 'long_lat', 'merchant_long_lat', 'currency', 'country', 'bpay_biller_code', ],axis = 1, inplace = True) 
+
+#Check missing data 
+
+missing_data = ANZ_df.isnull()
+
+
+#one-hot encoding gender: 
+
+
+
